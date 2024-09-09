@@ -1,0 +1,13 @@
+
+pip install --upgrade numpy # Numpy update
+pip install yfinance # installation of API
+
+import yfinance as yf #import
+apple_data = yf.download('AAPL', period = 'max') #AAPL => Apple
+
+apple_data.to_csv('apple_data_stocks.csv') #saving it as csv
+
+
+
+SP_500_data = yf.download('^GSPC',period = 'max') # for sp500
+SP_500_data.to_csv('sp500.csv') #saving it to csv
